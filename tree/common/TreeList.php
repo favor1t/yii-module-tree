@@ -16,6 +16,7 @@ class TreeList extends Tree
     static function getTreeList()
     {
         $res = parent::find()
+            ->indexBy['id']
             ->orderBy(['pid' => SORT_ASC])
             ->asArray()
             ->all();
